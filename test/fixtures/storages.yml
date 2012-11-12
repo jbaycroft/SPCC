@@ -1,0 +1,35 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  loc: MyString
+  material: MyString
+  throughput: MyString
+  cap: 
+  potentialfail: MyText
+  potentialrelease: 1
+  potentialrate: 1
+  direction: MyString
+  drainnear: MyText
+  fillprocedures: MyString
+  overfillprot: MyString
+  overfillprot_yes: MyText
+  leakdetect: MyString
+  leakdetect_yes: MyText
+
+two:
+  type: 
+  loc: MyString
+  material: MyString
+  throughput: MyString
+  cap: 
+  potentialfail: MyText
+  potentialrelease: 1
+  potentialrate: 1
+  direction: MyString
+  drainnear: MyText
+  fillprocedures: MyString
+  overfillprot: MyString
+  overfillprot_yes: MyText
+  leakdetect: MyString
+  leakdetect_yes: MyText

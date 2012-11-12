@@ -1,0 +1,32 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Name:</b>
+  <%= @client.name %>
+</p>
+
+<p>
+  <b>Location:</b>
+  <%= @client.location %>
+</p>
+
+<p>
+  <b>Description:</b>
+  <%= @client.description %>
+</p>
+
+<div class="storage">
+	<h2>Storage Locations</h2>
+	<table>
+		<tr>
+			<th>Storage Identifier</th>
+			<th> Other Field</th>
+		</tr>
+		<%= render @client.storages %> 
+	</table>
+</div>
+
+
+<%= link_to 'New Storage', new_client_storage_path(@client)%>
+<%= link_to 'Edit', edit_client_path(@client) %> |
+<%= link_to 'Back', clients_path %>

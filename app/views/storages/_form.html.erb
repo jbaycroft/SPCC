@@ -1,0 +1,76 @@
+<%= form_for @storage, :url => client_storage_path(@client) do |f| %>
+  <% if @storage.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(@storage.errors.count, "error") %> prohibited this storage from being saved:</h2>
+
+      <ul>
+      <% @storage.errors.full_messages.each do |msg| %>
+        <li><%= msg %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field" id="show">					
+	<td><%= f.select :type, [['AST','AST'], ['UST','UST'], ['Transformer','Transformer'],['Drums','Drums'], ['Equipment','Equipment']] %></td>						
+  </div>					
+  <div class="field">
+    <%= f.label :loc %><br />
+    <%= f.text_field :loc %>
+  </div>
+  <div class="field">
+    <%= f.label :material %><br />
+    <%= f.text_field :material %>
+  </div>
+  <div class="field">
+    <%= f.label :throughput %><br />
+    <%= f.text_field :throughput %>
+  </div>
+  <div class="field">
+    <%= f.label :cap %><br />
+    <%= f.text_field :cap %>
+  </div>
+  <div class="field">
+    <%= f.label :potentialfail %><br />
+    <%= f.text_area :potentialfail %>
+  </div>
+  <div class="field">
+    <%= f.label :potentialrelease %><br />
+    <%= f.number_field :potentialrelease %>
+  </div>
+  <div class="field">
+    <%= f.label :potentialrate %><br />
+    <%= f.number_field :potentialrate %>
+  </div>
+  <div class="field">
+    <%= f.label :direction %><br />
+    <%= f.text_field :direction %>
+  </div>
+  <div class="field">
+    <%= f.label :drainnear %><br />
+    <%= f.text_area :drainnear %>
+  </div>
+  <div class="field">
+    <%= f.label :fillprocedures %><br />
+    <%= f.text_field :fillprocedures %>
+  </div>
+  <div class="field">
+    <%= f.label :overfillprot %><br />
+    <%= f.text_field :overfillprot %>
+  </div>
+  <div class="field">
+    <%= f.label :overfillprot_yes %><br />
+    <%= f.text_area :overfillprot_yes %>
+  </div>
+  <div class="field">
+    <%= f.label :leakdetect %><br />
+    <%= f.text_field :leakdetect %>
+  </div>
+  <div class="field">
+    <%= f.label :leakdetect_yes %><br />
+    <%= f.text_area :leakdetect_yes %>
+  </div>
+  <div class="actions">
+    <%= f.submit %>
+  </div>
+<% end %>

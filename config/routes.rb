@@ -1,4 +1,10 @@
 SPCC::Application.routes.draw do
+  root :to => "clients#index"
+
+  resources :clients do
+    resources :storages
+  end
+
   # The priority is based upon order of creation:
   # first created -> highest priority.
 

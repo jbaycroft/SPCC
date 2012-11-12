@@ -1,0 +1,80 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <b>Type:</b>
+  <%= @storage.type %>
+</p>
+
+<p>
+  <b>Loc:</b>
+  <%= @storage.loc %>
+</p>
+
+<p>
+  <b>Material:</b>
+  <%= @storage.material %>
+</p>
+
+<p>
+  <b>Throughput:</b>
+  <%= @storage.throughput %>
+</p>
+
+<p>
+  <b>Cap:</b>
+  <%= @storage.cap %>
+</p>
+
+<p>
+  <b>Potentialfail:</b>
+  <%= @storage.potentialfail %>
+</p>
+
+<p>
+  <b>Potentialrelease:</b>
+  <%= @storage.potentialrelease %>
+</p>
+
+<p>
+  <b>Potentialrate:</b>
+  <%= @storage.potentialrate %>
+</p>
+
+<p>
+  <b>Direction:</b>
+  <%= @storage.direction %>
+</p>
+
+<p>
+  <b>Drainnear:</b>
+  <%= @storage.drainnear %>
+</p>
+
+<p>
+  <b>Fillprocedures:</b>
+  <%= @storage.fillprocedures %>
+</p>
+
+<p>
+  <b>Overfillprot:</b>
+  <%= @storage.overfillprot %>
+</p>
+
+<p>
+  <b>Overfillprot yes:</b>
+  <%= @storage.overfillprot_yes %>
+</p>
+
+<p>
+  <b>Leakdetect:</b>
+  <%= @storage.leakdetect %>
+</p>
+
+<p>
+  <b>Leakdetect yes:</b>
+  <%= @storage.leakdetect_yes %>
+</p>
+
+
+<%= link_to 'Edit', edit_storage_path(@storage) %> |
+<%= link_to 'Back', storages_path %>

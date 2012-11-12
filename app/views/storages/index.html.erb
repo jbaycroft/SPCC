@@ -1,0 +1,27 @@
+<h1>Listing storages</h1>
+
+<table>
+  <tr>
+    <th>Type</th>
+    <th>Loc</th>
+    <th>Material</th>
+    <th>Cap</th>
+  </tr>
+
+<% @client.storages.each do |storage| %>
+  <tr>
+    <td><%= storage.type %></td>
+    <td><%= storage.loc %></td>
+    <td><%= storage.material %></td>
+    <td><%= storage.cap %></td>
+    <td><%= link_to 'Show', storage %>|
+    	<%= link_to 'Edit', edit_storage_path(storage) %>|
+    	<%= link_to 'Destroy', storage, method: :delete, data: { confirm: 'Are you sure?' } %>
+	</td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New Storage', new_client_storage_path(@client) %>
