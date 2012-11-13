@@ -17,7 +17,7 @@ class StoragesController < ApplicationController
   # GET /storages/1
   # GET /storages/1.json
   def show
-    @storage = Storage.find(params[:id])
+    @storage = @client.storages.find(params[:id])
 
     respond_to do |format|
       format.html # show.html.erb
@@ -28,7 +28,7 @@ class StoragesController < ApplicationController
   # GET /storages/new
   # GET /storages/new.json
   def new
-    @storage = Storage.new
+    @storage = @client.storages.new
 
     respond_to do |format|
       format.html # new.html.erb
@@ -38,13 +38,13 @@ class StoragesController < ApplicationController
 
   # GET /storages/1/edit
   def edit
-    @storage = Storage.find(params[:id])
+    @storage = @client.storages.find(params[:id])
   end
 
   # POST /storages
   # POST /storages.json
   def create
-    @storage = Storage.new(params[:storage])
+    @storage = @client.storages.new(params[:storage])
 
     respond_to do |format|
       if @storage.save
@@ -60,7 +60,7 @@ class StoragesController < ApplicationController
   # PUT /storages/1
   # PUT /storages/1.json
   def update
-    @storage = Storage.find(params[:id])
+    @storage = @client.storages.find(params[:id])
 
     respond_to do |format|
       if @storage.update_attributes(params[:storage])
@@ -76,7 +76,7 @@ class StoragesController < ApplicationController
   # DELETE /storages/1
   # DELETE /storages/1.json
   def destroy
-    @storage = Storage.find(params[:id])
+    @storage = @client.storages.find(params[:id])
     @storage.destroy
 
     respond_to do |format|
