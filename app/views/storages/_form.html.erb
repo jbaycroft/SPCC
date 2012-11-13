@@ -1,4 +1,4 @@
-<%= form_for ([@client,@storage], :url => client_storage_path(@client)) do |f| %>
+<%= form_for ([@client,@client.departments.build], :url => client_storage_path(@client)) do |f| %>
   <% if @storage.errors.any? %>
     <div id="error_explanation">
       <h2><%= pluralize(@storage.errors.count, "error") %> prohibited this storage from being saved:</h2>
