@@ -10,13 +10,13 @@
 
 <% @client.storages.each do |storage| %>
   <tr>
-    <td><%= storage.type %></td>
+    <td><%= storage.tanktype %></td>
     <td><%= storage.loc %></td>
     <td><%= storage.material %></td>
     <td><%= storage.cap %></td>
-    <td><%= link_to 'Show', storage %>|
-    	<%= link_to 'Edit', edit_storage_path(storage) %>|
-    	<%= link_to 'Destroy', storage, method: :delete, data: { confirm: 'Are you sure?' } %>
+    <td><%= link_to 'Show', client_storage_path(@client,storage) %>|
+    	<%= link_to 'Edit', edit_client_storage_path(@client,storage) %>|
+    	<%= link_to 'Destroy', [@client, storage], method: :delete, data: { confirm: 'Are you sure?' } %>
 	</td>
   </tr>
 <% end %>

@@ -1,0 +1,12 @@
+form.new_storage div.field {
+  width:100%;
+  height:auto;
+  padding: 5px;
+  border:2px dotted black;
+  
+}
+
+textarea, input{
+	width:90%;
+	height: 30px;
+}

@@ -17,7 +17,15 @@
 #  database: db/test.sqlite3
 #  pool: 5
 #  timeout: 5000
-
+development:
+  adapter: mysql2
+  host: 127.0.0.1
+  database: spcc
+  username: root
+  password: 
+  pool: 5
+  timeout: 5000
+  
 production:
   adapter: pg
   host: ec2-54-243-39-42.compute-1.amazonaws.com

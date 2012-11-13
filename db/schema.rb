@@ -11,7 +11,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20121108171720) do
+ActiveRecord::Schema.define(:version => 20121113162512) do
 
   create_table "clients", :force => true do |t|
     t.string   "name"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 20121108171720) do
   end
 
   create_table "storages", :force => true do |t|
-    t.string   "type"
+    t.string   "tanktype"
     t.string   "loc"
     t.string   "material"
     t.string   "throughput"

@@ -6,7 +6,7 @@ class StoragesController < ApplicationController
     @client = Client.find(params[:client_id])
   end
   def index
-    @storages = Storage.all
+    @storages = @client.storages.all
 
     respond_to do |format|
       format.html # index.html.erb
@@ -28,12 +28,6 @@ class StoragesController < ApplicationController
   # GET /storages/new
   # GET /storages/new.json
   def new
-    @storage = @client.storages.new
-
-    respond_to do |format|
-      format.html # new.html.erb
-      format.json { render json: @storage }
-    end
   end
 
   # GET /storages/1/edit
@@ -48,7 +42,7 @@ class StoragesController < ApplicationController
 
     respond_to do |format|
       if @storage.save
-        format.html { redirect_to @storage, notice: 'Storage was successfully created.' }
+        format.html { redirect_to client_storages_path(@client), notice: 'Storage was successfully created.' }
         format.json { render json: @storage, status: :created, location: @storage }
       else
         format.html { render action: "new" }
@@ -80,7 +74,7 @@ class StoragesController < ApplicationController
     @storage.destroy
 
     respond_to do |format|
-      format.html { redirect_to storages_url }
+      format.html { redirect_to client_storages_url(@client) }
       format.json { head :no_content }
     end
   end
