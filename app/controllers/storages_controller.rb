@@ -42,7 +42,7 @@ class StoragesController < ApplicationController
 
     respond_to do |format|
       if @storage.save
-        format.html { redirect_to client_storages_path(@client), notice: 'Storage was successfully created.' }
+        format.html { redirect_to client_path(@client), notice: 'Storage was successfully created.' }
         format.json { render json: @storage, status: :created, location: @storage }
       else
         format.html { render action: "new" }
@@ -58,7 +58,7 @@ class StoragesController < ApplicationController
 
     respond_to do |format|
       if @storage.update_attributes(params[:storage])
-        format.html { redirect_to client_storages_path(@client), notice: 'Storage was successfully updated.' }
+        format.html { redirect_to client_path(@client), notice: 'Storage was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
@@ -74,7 +74,7 @@ class StoragesController < ApplicationController
     @storage.destroy
 
     respond_to do |format|
-      format.html { redirect_to client_storages_url(@client) }
+      format.html { redirect_to client_url(@client) }
       format.json { head :no_content }
     end
   end
