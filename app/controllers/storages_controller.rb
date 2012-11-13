@@ -58,7 +58,7 @@ class StoragesController < ApplicationController
 
     respond_to do |format|
       if @storage.update_attributes(params[:storage])
-        format.html { redirect_to @storage, notice: 'Storage was successfully updated.' }
+        format.html { redirect_to client_storages_path(@client), notice: 'Storage was successfully updated.' }
         format.json { head :no_content }
       else
         format.html { render action: "edit" }
